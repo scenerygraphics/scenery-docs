@@ -8,9 +8,49 @@ description: 'Here, we describe how to profile scenery applications.'
 
 scenery includes support for the [Remotery profiler](https://github.com/Celtoys/Remotery). Remotery is a simple profiler that can be used from a browser, either on the same machine, or remotely. Here's the series of steps required to profile a scenery-based application:
 
-1. Clone the Remotery repository and open `vis/index.html` in a browser. This is the client that connects to the application and visualises profiling results.
-2. In scenery, set up profiling by either handing the \(`SceneryBase`-derived\) application the `scenery.Profiler=true` system property on startup, or adding the a new `Remotery` instance to the `Hub`: `val profiler = Remotery() hub.add(profiler)` 
-3. A certain piece of code can then be wrapped in `begin()`and `end()` blocks of Remotery. The profiler object itself can be queried from the Hub, if available in that routine: `val profiler = hub.get<Remotery>() profiler?.begin("MyProfilingPoint") // do stuff profiler?.end()`
+Clone the Remotery repository and open `vis/index.html` in a browser. This is the client that connects to the application and visualises profiling results.
+
+In scenery, set up profiling by either handing the \(`SceneryBase`-derived\) application the `scenery.Profiler=true` system property on startup, or adding the a new `Remotery` instance to the `Hub`:
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+val profiler = Remotery()
+hub.add(profiler)
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+final Remotery profiler = new Remotery()
+hub.add(profiler)
+```
+{% endtab %}
+{% endtabs %}
+
+A certain piece of code can then be wrapped in `begin()`and `end()` blocks of Remotery. The profiler object itself can be queried from the Hub, if available in that routine:
+
+{% tabs %}
+{% tab title="Kotlin" %}
+```kotlin
+val profiler = hub.get<Remotery>()
+profiler?.begin("MyProfilingPoint")
+// do stuff
+profiler?.end()
+```
+{% endtab %}
+
+{% tab title="Java" %}
+```java
+final Remotery profiler = hub.get<Remotery>();
+if(profiler != null) {
+    profiler.begin("MyMarker");
+    // do stuff
+    profiler.end();
+}
+```
+{% endtab %}
+{% endtabs %}
 
 ## Using a 3rd-party Profiler
 
