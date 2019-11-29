@@ -22,8 +22,8 @@ hub.add(profiler)
 
 {% tab title="Java" %}
 ```java
-final Remotery profiler = new Remotery()
-hub.add(profiler)
+final Profiler profiler = new Remotery();
+hub.add(profiler);
 ```
 {% endtab %}
 {% endtabs %}
@@ -33,7 +33,7 @@ A certain piece of code can then be wrapped in `begin()`and `end()` blocks of Re
 {% tabs %}
 {% tab title="Kotlin" %}
 ```kotlin
-val profiler = hub.get<Remotery>()
+val profiler = hub.get<Profiler>()
 profiler?.begin("MyProfilingPoint")
 // do stuff
 profiler?.end()
@@ -42,15 +42,22 @@ profiler?.end()
 
 {% tab title="Java" %}
 ```java
-final Remotery profiler = hub.get<Remotery>();
-if(profiler != null) {
-    profiler.begin("MyMarker");
-    // do stuff
-    profiler.end();
+final Profiler profiler = hub.get<Profiler>();
+if(profiler == null) {
+    System.out.err("Could not get profiler :(");
+    System.exit(1);
 }
+
+profiler.begin("MyMarker");
+// do stuff
+profiler.end();
 ```
 {% endtab %}
 {% endtabs %}
+
+When connecting to the Remotery instance on the web browser, you'll see the profiling results, which are updated in realtime:
+
+![Example profiling results from VulkanRenderer when running TexturedCubeExample.](../.gitbook/assets/screenshot-2019-11-29-at-13.22.32.png)
 
 ## Using a 3rd-party Profiler
 
