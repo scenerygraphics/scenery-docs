@@ -14,4 +14,5 @@
 * [Instancing](advanced-topics/instancing.md)
 * [Rendering on Distributed Machines](advanced-topics/rendering-on-distributed-machines.md)
 * [Custom Controls](advanced-topics/custom-controls.md)
+* [Profiling](advanced-topics/profiling.md)
 
