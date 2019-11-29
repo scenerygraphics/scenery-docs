@@ -1,5 +1,5 @@
 ---
-description: 'Here, we describe how to profile scenery applications.'
+description: Curious what piece of code is slowing you down?
 ---
 
 # Profiling
