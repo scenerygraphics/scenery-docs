@@ -5,6 +5,7 @@
 
 ## Introduction
 
+* [Getting Started](introduction/getting-started.md)
 * [Rendering Meshes](introduction/rendering-meshes.md)
 * [Rendering Volumetric Data](introduction/rendering-volumetric-data.md)
 
