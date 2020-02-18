@@ -1,5 +1,9 @@
 # Welcome
 
+### 
+
+![](.gitbook/assets/68747470733a2f2f756c72696b2e69732f7363656e6572792d7465617365722d323031392e676966.gif)
+
 ### What is this about?
 
 Here, we describe scenery, an extensible framework for scientific visualisation of mesh and volumetric data that supports VR and AR. scenery supports a lot of input modalities -- apart from mouse and keyboard -- such as VRPN controllers, OpenVR/SteamVR controllers, gamepads, and eye trackers. 
