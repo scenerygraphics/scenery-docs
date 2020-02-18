@@ -1,7 +1,5 @@
 # Welcome
 
-### 
-
 ![](.gitbook/assets/68747470733a2f2f756c72696b2e69732f7363656e6572792d7465617365722d323031392e676966.gif)
 
 ### What is this about?
