@@ -39,6 +39,9 @@ As a build system, scenery uses Maven, which stores all project information, suc
 
 ### Running your first example
 
+> **_DEPRECATED:_**   The following is deprecated since scenery now uses the gradle build system. 
+
+
 #### Using Maven on the command line
 
 To build scenery on the command line, change to the scenery directory and run
