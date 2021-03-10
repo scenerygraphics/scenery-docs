@@ -1,2 +1,13 @@
 # Rendering Volumetric Data
 
+For a general explanation on Volumen Rendering see [Volumen Ray Casting](https://en.wikipedia.org/wiki/Volume_ray_casting)
+
+In Scenery volumen are represented by `Volumen` nodes. But unlike regular meshes those volumes are not rendered directly but together at the same time. This is coordinated by the `VolumeManager` which is `hubable` and a `Node` at the same time. 
+
+The sampling of each volume is done in the same shader. The shader is auto generated and specific to the amount and type of used volumes. Therefore, adding a volume may trigger a shader rebuild which automatically handled by the framework.
+For more see [Volumen Shader and Uniforms](../advanced-topics/volumen-shader-uniforms.md).
+
+
+##See Also 
+- Chapter 6 in Ulrik Günters PHD Thesis
+- Advanced Topic [Volumen Shader and Uniforms](../advanced-topics/volumen-shader-uniforms.md)
