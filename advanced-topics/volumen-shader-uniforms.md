@@ -35,9 +35,25 @@ uniform vec3 lineColor;
 
 ### Per VolumeUniform
 
-TODO
-- register in volumeManager
-- use currentProg.setCustom[FloatArrayUniformForVolume]
+To set a uniform per volume it needs to be declared as a per volume uniform first. If we want to have a `Vector3f slicingPlane` uniform for each volume which will be used in the sampling part of the shader we need to add it to the corresponding segments key lists in the `VolumeManager`. (At the time of writing (11.03.2021) this would be line 260 and 264 because there are two kind of sampling segments.)
+
+Then to set them we use the `.setCustomUniformForVolume(..)` of the current shader. In our example we could add our code to the loop over `renderStacksStates` like this:
+
+```kotlin
+val durationBinding = measureTimeMillis {
+    renderStacksStates
+        // sort by classname, so we get MultiResolutionStack3Ds first,
+        // then simple stacks
+        .sortedBy { it.javaClass.simpleName }
+        .forEachIndexed { i, state ->
+            // ...
+            currentProg.setCustomUniformForVolume(i, "slicingPlane", Vector3f(1f))
+            // ...
+        }
+}
+```
+
+If the target uniform is an array or matrix `.setCustomFloatArrayUniformForVolume(..)` has to be used.
 
 ## See also
 
