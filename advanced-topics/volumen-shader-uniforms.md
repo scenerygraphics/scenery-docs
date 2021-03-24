@@ -6,9 +6,8 @@ Scenery uses the [BigVolumeViewer](https://github.com/tpietzsch/jogl-minimal) (B
 
 As mentioned in [Rendering Volumetric Data](../introduction/rendering-volumetric-data.md) the Shader of the `VolumeManager` is auto generated according the type and amount of to-be-rendered volumes.
 
-![Shader Construction Graphic](../.gitbook/assets/shaderUniformLife.png)
-Shader Construction Graphic: The red elements are from BVV.
----
+![Shader Construction Graphic: The red elements are from BVV.](../.gitbook/assets/shaderUniformLife.png)
+
 Once the `VolumeManager` decides it needs to rebuild its shader it starts with collecting all needed code snippets. The shader code is saved in multiple glsl resource files and is annotated with preprocessing commands for the joining. Also the (hardcoded) per volume uniform names are collected. (See also next chapter) A code snippet with its associated uniforms is called a `Segment`. The segements along with information about the used volumes and other things are passed the `MultiVolumeShaderMip` constructor which is part of BVV.
 
 This constructor joins the segments to a first complete version of the shader code. This joining executes the earlier mentioned preprocessor commands, and the repetitions required to render multiple volumes. The result is saved internally as a `SegmentedShader`. This shader is still not compiled.
