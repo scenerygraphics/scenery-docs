@@ -8,6 +8,7 @@
 * [Getting Started](introduction/getting-started.md)
 * [Rendering Meshes](introduction/rendering-meshes.md)
 * [Rendering Volumetric Data](introduction/rendering-volumetric-data.md)
+* [Slice and Crop Volume Renderings](introduction/slicing-cropping-volumes.md)
 
 ## Advanced Topics
 
