@@ -12,6 +12,7 @@
 
 ## Controls & Input Handling
 
+* [Custom Controls](controls-and-input-handling/custom-controls.md)
 * [Gamepads](controls-and-input-handling/gamepads.md)
 
 ## Advanced Topics
@@ -19,7 +20,6 @@
 * [Custom Rendering Pipelines](advanced-topics/custom-rendering-pipelines.md)
 * [Instancing](advanced-topics/instancing.md)
 * [Rendering on Distributed Machines](advanced-topics/rendering-on-distributed-machines.md)
-* [Custom Controls](advanced-topics/custom-controls.md)
 * [Profiling](advanced-topics/profiling.md)
 * [Volumen Shader and Uniforms](advanced-topics/volumen-shader-uniforms.md)
 
