@@ -1,6 +1,6 @@
 # Getting Started
 
-### Prerequisites
+## Prerequisites
 
 For developing with scenery, or scenery itself, it's quite useful to have an IDE that supports you in your coding tasks. We recommend using IntelliJ as IDE, which is available as [free Community Edition from Jetbrains](https://www.jetbrains.com/idea/). In case you are an Eclipse user, there is a Kotlin plugin available in the Eclipse market place that can be used for development with scenery.
 
@@ -8,9 +8,9 @@ scenery and IntelliJ require an installed Java Development Kit \(JDK\), with ver
 
 In case you want to build scenery from the command line, you need to have [Maven ](https://maven.apache.org)installed.
 
-### Getting the code
+## Getting the code
 
-The git repository for scenery can be found at https://github.com/scenerygraphics/scenery, you can clone the repository to your drive by running 
+The git repository for scenery can be found at [https://github.com/scenerygraphics/scenery](https://github.com/scenerygraphics/scenery), you can clone the repository to your drive by running
 
 ```bash
 git clone https://github.com/scenerygraphics/scenery.git
@@ -24,7 +24,7 @@ git clone git@github.com:scenerygraphics/scenery.git
 
 That'll clone the scenery repository to a folder named `scenery` on your hard drive.
 
-### Repository structure
+## Repository structure
 
 The scenery repository consists of the following major directories:
 
@@ -37,12 +37,11 @@ Furthermore, there is an `artwork` directory, containing some scenery logos.
 
 As a build system, scenery uses Maven, which stores all project information, such as dependencies, in the file `pom.xml`.
 
-### Running your first example
+## Running your first example
 
-> **_DEPRECATED:_**   The following is deprecated since scenery now uses the gradle build system. 
+> _**DEPRECATED:**_ The following is deprecated since scenery now uses the gradle build system.
 
-
-#### Using Maven on the command line
+### Using Maven on the command line
 
 To build scenery on the command line, change to the scenery directory and run
 
@@ -60,7 +59,7 @@ mvn test -Dtest=TexturedCubeExample
 
 ... and the TexturedCubeExample should \(semi-\)magically show up.
 
-#### Using IntelliJ
+### Using IntelliJ
 
 First, import the project in IntelliJ:
 
@@ -77,7 +76,7 @@ Find an example you want to run, e.g. `TexturedCubeExample`, open the file, and 
 
 The example should now compile and magically show up on screen.
 
-### Where to go from here
+## Where to go from here
 
 The examples of scenery are a good starting point for exploring features or developing your own applications. Tinker around and modify them to your needs.
 

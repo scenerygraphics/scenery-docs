@@ -26,7 +26,7 @@ class Pyramid: Mesh("Pyramid of Giza") {
 
 Now we need to make a Polygon Mesh out of these. Scenery works by default with triangle meshes. So, our pyramid needs to be stored in a construct similar to:
 
-![](../.gitbook/assets/geogebra-export-1-%20%282%29.png)
+![](../.gitbook/assets/geogebra-export-1-%20%282%29%20%281%29.png)
 
 These triangles are stored vertex by vertex in counterclockwise direction, at least if you want to render your geometry with a normal triangle geometry. Lets have a look at our first triangle: A, B, C.
 

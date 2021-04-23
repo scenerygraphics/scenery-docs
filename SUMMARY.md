@@ -10,6 +10,10 @@
 * [Rendering Volumetric Data](introduction/rendering-volumetric-data.md)
 * [Slice and Crop Volume Renderings](introduction/slicing-cropping-volumes.md)
 
+## Controls & Input Handling
+
+* [Gamepads](controls-and-input-handling/gamepads.md)
+
 ## Advanced Topics
 
 * [Custom Rendering Pipelines](advanced-topics/custom-rendering-pipelines.md)

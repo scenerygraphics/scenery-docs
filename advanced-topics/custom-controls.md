@@ -11,19 +11,19 @@ In most cases a `ClickBehavior` is used. Example:
 ```kotlin
 val helloClick = object : ClickBehaviour {
     val output = "Hello World"
-    
+
     override fun click(x: Int, y: Int) {
         logger.info(output + "at $x and $y")
     }
 }
 ```
 
-For cases where the `x` and `y` screen positions of the cursor are not needed they are just ignored. 
-Adding a behavior to the `InputHandler` is straightforward:
+For cases where the `x` and `y` screen positions of the cursor are not needed they are just ignored. Adding a behavior to the `InputHandler` is straightforward:
 
 ```kotlin
 inputHandler?.addBehaviour("hello_click", helloClick)
 ```
+
 `inputHandler` should be available from an overwrite of the `inputSetup` method.
 
 ## Assigning Keys to Behaviors
