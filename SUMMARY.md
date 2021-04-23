@@ -21,5 +21,5 @@
 * [Instancing](advanced-topics/instancing.md)
 * [Rendering on Distributed Machines](advanced-topics/rendering-on-distributed-machines.md)
 * [Profiling](advanced-topics/profiling.md)
-* [Volumen Shader and Uniforms](advanced-topics/volumen-shader-uniforms.md)
+* [Volume Shaders and Uniforms](advanced-topics/volumen-shader-uniforms.md)
 

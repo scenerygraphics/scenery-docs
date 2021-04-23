@@ -1,4 +1,4 @@
-# Volumen Shader and Uniforms
+# Volume Shaders and Uniforms
 
 Scenery uses the [BigVolumeViewer](https://github.com/tpietzsch/jogl-minimal) \(BBV\) for rendering volumes. Currently, there is no documentation on BBV therefore we try to explain both a bit in this chapter. However, this chapter will only provide a brief overview with a focus on shader generation and uniform access.
 
