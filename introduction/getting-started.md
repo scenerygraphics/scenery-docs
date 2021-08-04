@@ -80,15 +80,15 @@ gradlew.bat TexturedCubeExample
 First, import the project in IntelliJ:
 
 * Click File &gt; Open and navigate to the scenery directory,
-* Open the file `pom.xml` there. When IntelliJ asks to open as project or as file, select _Open as Project_,
+* Open the file `build.gradle.kts` there. When IntelliJ asks to open as project or as file, select _Open as Project_,
 
 IntelliJ will now resolve and download all dependencies of scenery, which might take a while when you are doing this for the first time.
 
-When IntelliJ is done importing, navigate to the examples directory with the directory browser on the left. The directory is `src/test/tests/graphics/scenery/tests/examples`a. You can alternatively switch the directory tree to _Packages_ mode and navigate to `graphics.scenery.tests.examples`.
+When IntelliJ is done importing, navigate to the examples directory with the directory browser on the left. The directory is `src/test/tests/graphics/scenery/tests/examples`a. You can alternatively switch the directory tree to _Packages_ mode and navigate to `graphics.scenery.tests.examples.basic`.
 
-Find an example you want to run, e.g. `TexturedCubeExample`, open the file, and click on the small green _Play_ button that appears next to the class name:
+Find an example you want to run, e.g. `TexturedCubeExample`, open the file, and click on the small green _Play_ button that appears next to the main routine in that file:
 
-![](../.gitbook/assets/annotation-2020-02-18-201405.png)
+![](../.gitbook/assets/image.png)
 
 The example should now compile and magically show up on screen.
 
