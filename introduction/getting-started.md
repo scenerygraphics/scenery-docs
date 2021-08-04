@@ -6,8 +6,6 @@ For developing with scenery, or scenery itself, it's quite useful to have an IDE
 
 scenery and IntelliJ require an installed Java Development Kit \(JDK\), with versions 8, 11, and 12 being supported. scenery is fully compatible with OpenJDK, which you can download at [https://adoptopenjdk.net/](https://adoptopenjdk.net/).
 
-In case you want to build scenery from the command line, you need to have [Maven ](https://maven.apache.org)installed.
-
 ## Getting the code
 
 The git repository for scenery can be found at [https://github.com/scenerygraphics/scenery](https://github.com/scenerygraphics/scenery), you can clone the repository to your drive by running
@@ -35,27 +33,45 @@ The scenery repository consists of the following major directories:
 
 Furthermore, there is an `artwork` directory, containing some scenery logos.
 
-As a build system, scenery uses Maven, which stores all project information, such as dependencies, in the file `pom.xml`.
+As a build system, scenery uses [Gradle](https://www.gradle.org), which stores all project information, such as dependencies, in the file `build.gradle.kts`.
 
 ## Running your first example
 
-> _**DEPRECATED:**_ The following is deprecated since scenery now uses the gradle build system.
-
-### Using Maven on the command line
+### Using Gradle on the command line
 
 To build scenery on the command line, change to the scenery directory and run
 
+{% tabs %}
+{% tab title="Bash \(Linux, macOS, git bash\)" %}
 ```bash
-mvn clean package
+./gradlew build
 ```
+{% endtab %}
 
-This will build the scenery JAR files in the `target` directory. The first build will take a while because all dependencies are downloaded from teh interwebs. When the build is successful, there should be multiple files there, named `scenery-[VERSION].jar`, `scenery-[VERSION]-tests.jar`, and`scenery-[VERSION]-sources.jar`
+{% tab title="cmd \(Windows\)" %}
+```
+gradlew.bat build
+```
+{% endtab %}
+{% endtabs %}
+
+This will download the Gradle version required automatically, followed by all dependencies required. Then, it will build the scenery JAR files in the `build/libs` directory. The first build will take a while because all dependencies are downloaded from teh interwebs. When the build is successful, there should be multiple files there, named `scenery-[VERSION].jar`, `scenery-[VERSION]-tests.jar`, and`scenery-[VERSION]-sources.jar`
 
 From the scenery repository directory, you can then run
 
+{% tabs %}
+{% tab title="Bash \(Linux, macOS, git bash\)" %}
 ```text
-mvn test -Dtest=TexturedCubeExample
+./gradlew TexturedCubeExample
 ```
+{% endtab %}
+
+{% tab title="cmd \(Windows\)" %}
+```
+gradlew.bat TexturedCubeExample
+```
+{% endtab %}
+{% endtabs %}
 
 ... and the TexturedCubeExample should \(semi-\)magically show up.
 
