@@ -9,6 +9,8 @@
 * [Rendering Meshes](introduction/rendering-meshes.md)
 * [Rendering Volumetric Data](introduction/rendering-volumetric-data.md)
 * [Slice and Crop Volume Renderings](introduction/slicing-cropping-volumes.md)
+* [Attributes API](introduction/attributes-api.md)
+* [Node transformations](introduction/node-transformations.md)
 
 ## Controls & Input Handling
 
@@ -22,4 +24,3 @@
 * [Rendering on Distributed Machines](advanced-topics/rendering-on-distributed-machines.md)
 * [Profiling](advanced-topics/profiling.md)
 * [Volume Shaders and Uniforms](advanced-topics/volumen-shader-uniforms.md)
-
