@@ -2,6 +2,7 @@
 
 * [Welcome](README.md)
 * [FAQ](faq.md)
+* [GPU compatibility](gpu-compatibility.md)
 
 ## Introduction
 
