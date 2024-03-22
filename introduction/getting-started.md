@@ -4,7 +4,7 @@
 
 For developing with scenery, or scenery itself, it's quite useful to have an IDE that supports you in your coding tasks. We recommend using IntelliJ as IDE, which is available as [free Community Edition from Jetbrains](https://www.jetbrains.com/idea/). In case you are an Eclipse user, there is a Kotlin plugin available in the Eclipse market place that can be used for development with scenery.
 
-scenery and IntelliJ require an installed Java Development Kit \(JDK\), with versions 8, 11, and 12 being supported. scenery is fully compatible with OpenJDK, which you can download at [https://adoptopenjdk.net/](https://adoptopenjdk.net/).
+scenery and IntelliJ require an installed Java Development Kit (JDK), with version 21 and upwards being supported. scenery is fully compatible with OpenJDK, which you can download at [https://adoptium.net/](https://adoptium.net/).
 
 ## Getting the code
 
@@ -16,7 +16,7 @@ git clone https://github.com/scenerygraphics/scenery.git
 
 Should you already have a Github account and an SSH key set up with that account, you can also use
 
-```text
+```
 git clone git@github.com:scenerygraphics/scenery.git
 ```
 
@@ -42,13 +42,13 @@ As a build system, scenery uses [Gradle](https://www.gradle.org), which stores a
 To build scenery on the command line, change to the scenery directory and run
 
 {% tabs %}
-{% tab title="Bash \(Linux, macOS, git bash\)" %}
+{% tab title="Bash (Linux, macOS, git bash)" %}
 ```bash
 ./gradlew build
 ```
 {% endtab %}
 
-{% tab title="cmd \(Windows\)" %}
+{% tab title="cmd (Windows)" %}
 ```
 gradlew.bat build
 ```
@@ -60,26 +60,26 @@ This will download the Gradle version required automatically, followed by all de
 From the scenery repository directory, you can then run
 
 {% tabs %}
-{% tab title="Bash \(Linux, macOS, git bash\)" %}
-```text
+{% tab title="Bash (Linux, macOS, git bash)" %}
+```
 ./gradlew TexturedCubeExample
 ```
 {% endtab %}
 
-{% tab title="cmd \(Windows\)" %}
+{% tab title="cmd (Windows)" %}
 ```
 gradlew.bat TexturedCubeExample
 ```
 {% endtab %}
 {% endtabs %}
 
-... and the TexturedCubeExample should \(semi-\)magically show up.
+... and the TexturedCubeExample should (semi-)magically show up.
 
 ### Using IntelliJ
 
 First, import the project in IntelliJ:
 
-* Click File &gt; Open and navigate to the scenery directory,
+* Click File > Open and navigate to the scenery directory,
 * Open the file `build.gradle.kts` there. When IntelliJ asks to open as project or as file, select _Open as Project_,
 
 IntelliJ will now resolve and download all dependencies of scenery, which might take a while when you are doing this for the first time.
@@ -95,4 +95,3 @@ The example should now compile and magically show up on screen.
 ## Where to go from here
 
 The examples of scenery are a good starting point for exploring features or developing your own applications. Tinker around and modify them to your needs.
-
