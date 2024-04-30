@@ -2,7 +2,7 @@
 
 Meshes are, as you probably know, a collection of polygons. If you have never heard of the concept, do not worry, we will explain it on the fly. In case you still want to learn more, here is a very visual article for you: [https://conceptartempire.com/polygon-mesh/](https://conceptartempire.com/polygon-mesh/) – also virtually any introductory book on computer graphics contains this topic.
 
-Lets jump right into it with an example! Say you would like to render the Pyramid of Cheops. Fortunately, we don't need thousands of slaves \(or aliens\) to do that. More useful in our case is a class which inherits from the Mesh class, for example like this:
+Lets jump right into it with an example! Say you would like to render the Pyramid of Cheops. Fortunately, we don't need thousands of slaves (or aliens) to do that. More useful in our case is a class which inherits from the Mesh class, for example like this:
 
 ```kotlin
 class Pyramid: Mesh("Pyramid of Cheops") {}
@@ -26,13 +26,13 @@ class Pyramid: Mesh("Pyramid of Giza") {
 
 Now we need to make a Polygon Mesh out of these. Scenery works by default with triangle meshes. So, our pyramid needs to be stored in a construct similar to:
 
-![](../.gitbook/assets/geogebra-export-1-%20%282%29%20%281%29.png)
+![](<../.gitbook/assets/geogebra-export-1- (2) (1).png>)
 
 These triangles are stored vertex by vertex in counterclockwise direction, at least if you want to render your geometry with a normal triangle geometry. Lets have a look at our first triangle: A, B, C.
 
 ![](../.gitbook/assets/geogebra-export-3-.png)
 
-It deos not matter, in which order you store the vertices as long as the order is counterclockwise, from outside the object. Consequentially, `[A; C; B]`, `[B; A; C]`, and `[C; B; A]` are the options you have in this case. Lets do this for all our triangles:
+It does not matter in which order you store the vertices as long as the order is counterclockwise from outside the object. Consequentially, `[A; C; B]`, `[B; A; C]`, and `[C; B; A]` are the options you have in this case. Lets do this for all our triangles:
 
 ```kotlin
 class Pyramid: Mesh("Pyramid of Giza") {
@@ -51,7 +51,7 @@ class Pyramid: Mesh("Pyramid of Giza") {
 }
 ```
 
-Now we are almost there. In the next step we will allocate and fill our vertices buffer with our vertices and then calculate a normal vector for each triangle. Fortunately, this is done by the function `recalculateNormals()`, note that the vertices must be stored in the right \(counterclockwise\) order for it to work. 
+Now we are almost there. In the next step we will allocate and fill our vertices buffer with our vertices and then calculate a normal vector for each triangle. Fortunately, this is done by the function `recalculateNormals()`, note that the vertices must be stored in the right (counterclockwise) order for it to work.&#x20;
 
 ```kotlin
 class Pyramid: Mesh("Pyramid of Giza") {
@@ -81,7 +81,6 @@ class Pyramid: Mesh("Pyramid of Giza") {
     }
 ```
 
-Congratulations! You just wrote your first Mesh. If you wish to render the Pyramid in a different manner, consider the enum GeometryType which give you a lot of options, e.g. rendering only the vertices. Otherwise, there it is, the mighty Pyramid of Cheops:
+Congratulations! You just wrote your first Mesh. If you wish to render the Pyramid in a different manner, consider the `enum GeometryType` which gives you a lot of options, e.g. rendering only the vertices. Otherwise, there it is, the mighty Pyramid of Cheops:
 
 ![](../.gitbook/assets/pyramid.png)
-

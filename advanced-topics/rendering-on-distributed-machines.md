@@ -8,14 +8,14 @@ description: >-
 
 _Rendering with distributed setups is still experimental, so this document is very likely to change in the future._
 
-![CAVE at the Center for Systems Biology Dresden, running scenery&apos;s DemoReelExample and showing a \_Drosophila melanogaster\_ developmental dataset. Photo courtesy of Katrin Boes, MPI-CBG, dataset courtesy of Lo&#xEF;c Royer, MPI-CBG/CZ BioHub.](../.gitbook/assets/vr-in-science.jpg)
+![CAVE at the Center for Systems Biology Dresden, running scenery's DemoReelExample and showing a \_Drosophila melanogaster\_ developmental dataset. Photo courtesy of Katrin Boes, MPI-CBG, dataset courtesy of Loïc Royer, MPI-CBG/CZ BioHub.](../.gitbook/assets/vr-in-science.jpg)
 
 ## Requirements
 
 For all machines of the setup:
 
 * current version of Java 11 installed from [adoptopenjdk.net](https://adoptopenjdk.net)
-* up-to-date graphics driver \(currently only tested with Nvidia Quadro cards, get the most up-to-date drivers from [nvidia.com/drivers](https://nvidia.com/drivers)\)
+* up-to-date graphics driver (currently only tested with Nvidia Quadro cards, get the most up-to-date drivers from [nvidia.com/drivers](https://nvidia.com/drivers))
 * Vulkan SDK installed for debugging, [vulkan.lunarg.com](https://vulkan.lunarg.com)
 * psexec for remote execution installed, from [docs.microsoft.com/en-us/sysinternals/downloads/psexec](https://docs.microsoft.com/en-us/sysinternals/downloads/psexec)
 
@@ -35,7 +35,11 @@ Install the above requirements on the machines, and make sure that processes can
 
 In order to run distributed applications, all machines need to access to two network shares, which do not necessarily need to reside on the same machine:
 
-1. a share containing the scenery application directory, including all JARs built, a suggested structure for this is: `# contains the scripts from the cluster-scripts repository path/to/base # contains the scenery git repository and JARs path/to/base/scenery`
+1. a share containing the scenery application directory, including all JARs built, a suggested structure for this is:\
+   `# contains the scripts from the cluster-scripts repository`\
+   `path/to/base`\
+   `# contains the scenery git repository and JARs`\
+   `path/to/base/scenery`
 2. a share containing the data to be loaded.
 
 The scripts from the `cluster-scripts` repository need to be adjusted for your local setup, in particular the username and password for the rendering node accounts need to be changed, as well as their names, and the name of the network share used. Go through the scripts carefully, they contain comments in places that need to be changed and are very short.
@@ -90,7 +94,7 @@ We assume that all projectors have the same resolution. When launching on each o
 
 In IntelliJ, find `DemoReelExample`. This example can be found in the project in the `src/test/tests/graphics/scenery/examples/cluster` directory. In the example, make sure that the IP given for `TrackedStereoGlasses` matches that of your tracking system, and the YAML file given matches the name of your screen configuration. Then, click the `Run`button to run this locally and verify all data is found.
 
-Afterwards, go to `Run > Edit Configurations...` to adjust the parameters of this test for it in order to run on all nodes. The VM options of DemoReelExample should look like the following:
+Afterwards, go to `Run > Edit Configurations...` to adjust the parameters of this test in order for it to run on all nodes. The VM options of `DemoReelExample` should look like the following:
 
 ![Run configurations window for DemoReelExample](../.gitbook/assets/run-configurations.png)
 
@@ -103,23 +107,22 @@ In the _Before launch_ part of the window, two additional steps need to be added
 
 ![](../.gitbook/assets/run-on-cluster.png)
 
-After this is complete, DemoReelExample can be run again and should now launch on all the nodes.
+After this is complete, `DemoReelExample` can be run again and should now launch on all the nodes.
 
 ### Controls
 
-In DemoReelExample, you can use the WASD keys of the keyboard to move around. You can also keep an Xbox or PS4 gamepad connected to the control node to use for movement. Further keybindings are:
+In `DemoReelExample`, you can use the WASD keys of the keyboard to move around. You can also keep an Xbox or PS4 gamepad connected to the control node to use for movement. Further keybindings are:
 
-| Button | Function |
-| :--- | :--- |
-| `Shift` `1` | Go to the Bile scene |
+| Button      | Function                   |
+| ----------- | -------------------------- |
+| `Shift` `1` | Go to the Bile scene       |
 | `Shift` `2` | Go to the C. elegans scene |
 | `Shift` `3` | Go to the Drosophila scene |
-| `I`, `K` | Rotate scene up/down |
-| `J`,`L` | Rotate scene left/right |
+| `I`, `K`    | Rotate scene up/down       |
+| `J`,`L`     | Rotate scene left/right    |
 
 In order to quit the demo on all nodes, use the `killall-java.bat` script.
 
 ## Troubleshooting
 
 Should you experience any issues, please feel free to contact us on the [Gitter channel](https://gitter.im/scenerygraphics/SciView), or [file an issue on Github](https://github.com/scenerygraphics/scenery/issues).
-
