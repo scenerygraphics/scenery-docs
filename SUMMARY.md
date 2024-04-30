@@ -12,6 +12,7 @@
 * [Slice and Crop Volume Renderings](introduction/slicing-cropping-volumes.md)
 * [Attributes API](introduction/attributes-api.md)
 * [Node transformations](introduction/node-transformations.md)
+* [Bounding Boxes](introduction/bounding-boxes.md)
 
 ## Controls & Input Handling
 
